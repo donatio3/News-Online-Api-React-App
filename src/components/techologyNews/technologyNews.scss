@@ -1,0 +1,42 @@
+.technologyNews {
+    padding-top: 75px;
+
+
+
+    .post__item {
+        margin-top: 60px;
+        margin: 60px auto 0 auto;
+        justify-content: start;
+        display: flex;
+        min-height: 250px;
+        width: 1140px;
+        border: 1px solid rgb(232, 232, 232);
+        margin-bottom: 15px;
+        
+        
+        .post__img {
+            width: 250px;
+            height: 250px;  
+            object-fit: cover;
+
+            img {
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
+            }
+        }
+
+        .post__content {
+            padding: 32px;
+
+            .entry-header {
+                text-align: left;
+            }
+
+            .entry-content {
+                    text-align: left;
+            }
+        }
+
+    }
+}

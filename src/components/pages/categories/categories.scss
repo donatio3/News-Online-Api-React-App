@@ -1,0 +1,48 @@
+.newsBlog {
+
+    .content__wrapper {
+
+        .site-main {
+            .news__post {
+                padding-top: 45px;
+                .post__item {
+                    margin: 0px auto 40px auto;
+                    justify-content: start;
+                    display: flex;
+                    min-height: 250px;
+                    width: auto;
+                    border: 1px solid rgb(232, 232, 232);
+                    
+                    
+                    
+                    .post__img {
+                        width: 250px;
+                        height: 250px;  
+                        object-fit: cover;
+            
+                        img {
+                            width: 250px;
+                            height: 250px;
+                            object-fit: cover;
+                        }
+                    }
+            
+                    .post__content {
+                        padding: 32px;
+            
+                        .entry-header {
+                            text-align: left;
+                        }
+            
+                        .entry-content {
+                                text-align: left;
+                        }
+                    }
+            
+                }
+            }
+        }
+        
+    }   
+    
+}

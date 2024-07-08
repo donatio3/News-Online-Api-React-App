@@ -1,0 +1,45 @@
+.top-bar {
+    background: #f4f4f4;
+    border-top: 1px solid #ebebeb;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    height: 110px;
+
+    .page-title {
+        font-size: 18px;
+    }
+
+    #crumbs {
+        text-align: right;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        span {
+            a {
+                color: #919191;
+                font-size: 12px;
+                text-decoration: none;
+                cursor: pointer;
+                transition: all 0.2s;
+                &:hover {
+                    color: black;
+    
+                }
+            }:last-child {
+                cursor:default;
+                &:hover {
+                    color: #919191;
+                }
+            }
+
+            
+        }
+
+        .seperator {
+            margin: 0 5px;
+        }
+    }
+}

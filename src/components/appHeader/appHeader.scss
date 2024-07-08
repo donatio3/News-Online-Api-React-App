@@ -1,0 +1,125 @@
+header {
+    .main-header {
+        background-color: #386FA7;
+        display: flex;
+        padding: 8px 0 11px;
+        height: 30px;
+        justify-content: space-between;
+        align-items:center;
+
+        .main-header-nav {
+            margin-left: 175px;
+            a {
+                margin-left: 25px;
+                color: white;
+                font-size: 12px;
+                text-decoration: none;
+            }:nth-child(1) {
+                margin-left: 0;
+            }
+        }
+
+        .social__link {
+            margin-right: 175px;
+            display: flex;
+            align-items: center;
+            a {
+                margin-left: 15px;
+            }:nth-child(1) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .second-header {
+        position: relative;
+
+        .logo {
+            text-align: left;
+            margin-bottom: 45px;
+            h2 {
+                font-size: 38px;
+                font-weight: 700;
+                margin-top: 15px;
+                
+            }
+            .descr {
+                font-size: 14px;
+                position: absolute;
+                top: 45px;
+                color: rgb(142, 142, 142);
+                font-weight: 400;
+            }
+        }
+
+        .main-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+
+
+            .search__item {
+                form {
+                    display: flex;
+                    
+                    button {
+                        padding-right: 1px;
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                        svg {
+                            z-index: 1;
+                        }
+                    }
+
+                    .search-news {
+                        margin-right: 10px;
+                    }
+
+                }
+            }
+        }
+        
+
+        .top-hr {
+            position: absolute;
+            display: block;
+            height: 1px;
+            width: 80%;
+            top: 111px;
+            background-color: rgb(145, 145, 145);
+                
+        }
+
+        .pages__wrapper {
+            display: flex;
+            list-style-type: none;
+            padding-inline-start: 0;
+            a {
+                margin-right: 33px;
+                height: 30px;
+                display: block;
+                font-size: 16px;
+                font-weight: 400;
+                padding-top: 18px;
+                padding-bottom: 15px;
+                text-decoration:none;
+                color: black;
+
+                &:hover {
+                    border-top: 2px solid rgb(56, 111, 167);
+                    height: 29px;
+                }
+            }
+
+            .active {
+                border-top: 2px solid #386FA7;
+                &:hover {
+                    height: 30px; 
+                }   
+            }
+            
+        }
+    }
+}

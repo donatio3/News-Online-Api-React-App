@@ -1,0 +1,36 @@
+.topNews{
+    background-color: white;
+    padding-top: 60px;
+
+    
+
+
+    &__post {
+        padding-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 360px);
+        grid-template-rows: 500px;
+        justify-content: center;
+        grid-column-gap: 30px;
+        grid-row-gap: 15px;
+
+        .post__item {
+            .image-holder {
+                position: relative;
+                width: 360px;
+                height: 250px;
+                margin: 0 auto;
+                img {
+                    width: 360px;
+                    height: 100%;
+                }
+                a {
+                    width: 360px;
+                    
+                }
+            }
+
+            
+        }
+    }
+}

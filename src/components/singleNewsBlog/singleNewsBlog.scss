@@ -1,0 +1,38 @@
+.singleNewsBlog {
+    padding-top: 50px;
+    
+    .content__wrapper {
+        padding-top: 60px;
+    }
+
+    .post__content {
+        width: 832px;
+
+        .post__content-thumbnail {
+            img {
+                width: 832px;
+                height: 437px;
+                object-fit: contain;
+            }
+        }
+
+        .entry-header {
+            border-bottom: solid #e3e3e3 1px;
+        }
+
+        .entry-data {
+            display: flex;
+            justify-content: space-between;
+            .author {
+                margin-right: 17px;
+                margin-left: 5px;
+                color: rgb(145, 145, 145);
+                font-weight: 400;
+                font-size: 13px;
+
+            }
+        }
+
+    }
+    
+}
