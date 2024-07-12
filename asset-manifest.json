@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/donatio3/News-Online-Api-React-App/static/css/main.1f700cc2.css",
-    "main.js": "/donatio3/News-Online-Api-React-App/static/js/main.036e2db4.js",
-    "static/media/instagram.svg": "/donatio3/News-Online-Api-React-App/static/media/instagram.faee92765cd026d80b787741260180ac.svg",
-    "static/media/Group.svg": "/donatio3/News-Online-Api-React-App/static/media/Group.1a159174e730ccfa8b4147e88e330953.svg",
-    "static/media/linkedin.svg": "/donatio3/News-Online-Api-React-App/static/media/linkedin.9c9e82b26d9657303ef9d68c1760f299.svg",
-    "index.html": "/donatio3/News-Online-Api-React-App/index.html",
-    "static/media/facebook.svg": "/donatio3/News-Online-Api-React-App/static/media/facebook.ac81f877c5edce5f3a9ed27d70de3b92.svg",
-    "main.1f700cc2.css.map": "/donatio3/News-Online-Api-React-App/static/css/main.1f700cc2.css.map",
-    "main.036e2db4.js.map": "/donatio3/News-Online-Api-React-App/static/js/main.036e2db4.js.map"
+    "main.css": "/News-Online-Api-React-App/static/css/main.1f700cc2.css",
+    "main.js": "/News-Online-Api-React-App/static/js/main.8350774d.js",
+    "static/media/instagram.svg": "/News-Online-Api-React-App/static/media/instagram.faee92765cd026d80b787741260180ac.svg",
+    "static/media/Group.svg": "/News-Online-Api-React-App/static/media/Group.1a159174e730ccfa8b4147e88e330953.svg",
+    "static/media/linkedin.svg": "/News-Online-Api-React-App/static/media/linkedin.9c9e82b26d9657303ef9d68c1760f299.svg",
+    "index.html": "/News-Online-Api-React-App/index.html",
+    "static/media/facebook.svg": "/News-Online-Api-React-App/static/media/facebook.ac81f877c5edce5f3a9ed27d70de3b92.svg",
+    "main.1f700cc2.css.map": "/News-Online-Api-React-App/static/css/main.1f700cc2.css.map",
+    "main.8350774d.js.map": "/News-Online-Api-React-App/static/js/main.8350774d.js.map"
   },
   "entrypoints": [
     "static/css/main.1f700cc2.css",
-    "static/js/main.036e2db4.js"
+    "static/js/main.8350774d.js"
   ]
 }
