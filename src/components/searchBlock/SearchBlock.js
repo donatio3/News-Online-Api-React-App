@@ -5,15 +5,8 @@ import NavigationBlock from "../navigationBlock/NavigationBlock"
 import NewsService from "../../services/NewsService"
 import AppHeader from "../appHeader/AppHeader"
 
-import Button from '@mui/material/Button';
-
-import facebook from '../../resourse/icons/facebook.svg'
-import vector from '../../resourse/icons/Group.svg'
-import linkedin from '../../resourse/icons/linkedin.svg'
-import instagram from '../../resourse/icons/instagram.svg';
 
 import './searchBlock.scss'
-import { TextField } from "@mui/material"
 import Spinner from "../spiner/Spinner"
 import AsideBlock from "../asideBlock/AsideBlock"
 import Pagination from "../Pagination/Pagination"
@@ -25,10 +18,10 @@ const SearchBlock = () => {
 
     const [news, setNews] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
-    const [newsPerPage, setNewsPerPage] = useState(20)
+    const [newsPerPage, setNewsPerPage] = useState(10)
 
 
-    const {process, setProcess, error, getNewsByWord, getRandomNews, getPopularNews, getScienceNews} = NewsService()
+    const {process, setProcess, getNewsByWord,} = NewsService()
 
     useEffect(() => {
         loadNews()
@@ -77,10 +70,7 @@ const View = (props) => {
     const lastNewsIndex = currentPage * newsPerPage
     const firstNewsIndex = lastNewsIndex - newsPerPage
     const currentNews = news.slice(firstNewsIndex, lastNewsIndex) 
-    const paginate = pageNumber => setCurrentPage(pageNumber)
-
     const totalPageNumbers = Math.ceil(news.length / newsPerPage)
-
 
     return (
             <>
@@ -93,10 +83,8 @@ const View = (props) => {
 
                                 <NewsPosts searchResult={searchResult} news={currentNews}/>
 
-
                                 <div className="pages__buttons">
 
-                                    
                                     <Link to={`../search/page/1/${searchResult}`}>
                                         <button style={{display: +pageNumber === 1 ? 'none' : 'block'}}  onClick={() => setCurrentPage(currentPage => currentPage -1)} className="page-firstLast">
                                             <svg style={{transform: 'rotate(180deg)'}} class="svg-inline--fa fa-angles-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angles-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M246.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L178.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C47.63 444.9 55.81 448 64 448s16.38-3.125 22.62-9.375l160-160C259.1 266.1 259.1 245.9 246.6 233.4zM438.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L370.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C239.6 444.9 247.8 448 256 448s16.38-3.125 22.62-9.375l160-160C451.1 266.1 451.1 245.9 438.6 233.4z"></path></svg>
@@ -105,11 +93,12 @@ const View = (props) => {
                                     
 
                                     <Pagination 
-                                    paginate={paginate}
-                                    newsPerPage={newsPerPage}
-                                    totalNews={news.length}
+                                    news={news}
                                     searchResult={searchResult}
-                                    pageNumber={pageNumber}/>
+                                    urlProps={'search'}
+                                    currentPage={currentPage}
+                                    totalPageNumbers={totalPageNumbers}
+                                    setCurrentPage={setCurrentPage}/>
 
                                     <Link to={`../search/page/${totalPageNumbers}/${searchResult}`}>
                                         <button style={{display: +pageNumber === +totalPageNumbers ? 'none' : 'block', transform: 'rotate(180deg)'}} onClick={() => setCurrentPage(currentPage => currentPage + 1)} className="page-firstLast">

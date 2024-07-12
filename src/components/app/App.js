@@ -21,7 +21,7 @@ return (
 
             <Router>
                     <Routes>
-                        <Route element={<Categories/>} path='/:categories'></Route>
+                        <Route element={<Categories/>} path='/:categories/page/:pageNumber'></Route>
                         <Route element={<MainPage/>} path='/'></Route>
                         <Route element={<Contact/>} path='/contact'></Route>
                         <Route element={<SingleNewsBlog/>} path='/:singleNews/:newsId'></Route>

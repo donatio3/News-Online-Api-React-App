@@ -14,7 +14,7 @@ const SingleNewsBlog = () => {
     
     const [news, setNews] = useState('sd')
     
-    const {loading, error, getAllNews, getNewsByWord,getCategoryNews, getPopularNews} = NewsService()
+    const {loading, error, getAllNews, getNewsByWord, getCategoryNews, getPopularNews} = NewsService()
 
     console.log(singleNews, 'singleNews')
     
@@ -35,11 +35,11 @@ const SingleNewsBlog = () => {
                 break;
                 
             case 'randomNews':
-                loadNews(getCategoryNews, 'general')
+                loadNews(getCategoryNews, 'entertainment')
                 break;
 
             case 'topNews': 
-            loadNews(getCategoryNews, 'entertainment')
+            loadNews(getCategoryNews, 'general')
                 break;
             case 'popularNews':
                 loadNews(getPopularNews)
@@ -48,8 +48,10 @@ const SingleNewsBlog = () => {
                 loadNews(getCategoryNews, 'science')
                 break;
             case singleNews: 
-                getNewsByWord(singleNews)
+                
+            getCategoryNews(singleNews)
                 .then(res => {
+                    console.log(res, singleNews, 'res single news   ')
                     setNews(res[newsId])
                 })
                 break 

@@ -1,29 +1,58 @@
 import React from 'react';
-// rsf
-import {Link, NavLink, useParams } from "react-router-dom"
 import { Button } from '@mui/material';
+import { Link, NavLink, useNavigate, useParams } from "react-router-dom"
+import { useEffect, useState } from "react"
 
-const Pagination = ({newsPerPage, totalNews, searchResult, pageNumber, paginate}) => {
+
+
+const Pagination = ({news, currentPage, setCurrentPage, totalPageNumbers, categories, urlProps, searchResult}) => {
+    const {pageNumber} = useParams()
+    const navigate = useNavigate()
+
+    // const [currentPage, setCurrentPage] = useState(1)
+    const [newsPerPage, setNewsPerPage] = useState(10)
+
+    // const lastNewsIndex = currentPage * newsPerPage
+    // const firstNewsIndex = lastNewsIndex - newsPerPage
+    // const currentNews = news.slice(firstNewsIndex, lastNewsIndex) 
+    const paginate = pageNumber => setCurrentPage(pageNumber)
+
+    // const totalPageNumbers = Math.ceil(news.length / newsPerPage)
     const pageNumbers = []
 
-    for (let i = 1; i <= Math.ceil(totalNews / newsPerPage); i++) {
+    for (let i = 1; i <= totalPageNumbers; i++) {
         pageNumbers.push(i)
     }
+
+    
 
     return (
         <>
             <ul className="pagination">
                 {
-                    pageNumbers.map(number => (
-                        <NavLink style={{marginRight: '10px'}} key={number} 
-                        to={`../search/page/${number}/${searchResult}`}
-                        onClick={() => paginate(number)}
-                        >
-                            <Button size="small"variant={number === +pageNumber ? "contained" : "outlined"}>
-                                {number}
-                            </Button>
-                        </NavLink>
-                    ))
+                    pageNumbers.map((number, i) => {
+                        let url
+                        switch (urlProps) {
+                            case 'search':
+                                url = `../${urlProps}/page/${i + 1}/${searchResult}`
+                                break;
+                            case categories:
+                                url = `../${urlProps}/page/${i + 1}`
+                                break;
+                            default:
+                                break;
+                        }
+
+                        return (
+                            <NavLink style={{marginRight: '10px'}} key={number}
+                            to={`${url}`}
+                            onClick={() => paginate(number)}>
+                                <Button size="small"variant={number === +pageNumber ? "contained" : "outlined"}>
+                                    {number}
+                                </Button>
+                            </NavLink>
+                        )
+                    })
                 }
             </ul>
         </>
