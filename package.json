@@ -2,7 +2,8 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://donatio3.github.io/Online-News-Api-React-App",
+  "homepage": "https://donatio3.github.io/News-Online-Api-React-App"
+,
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
