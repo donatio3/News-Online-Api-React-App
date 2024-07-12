@@ -1,6 +1,6 @@
 import './App.css';
 
-import {BrowserRouter as Router, Route, Routes,} from 'react-router-dom';
+import {HashRouter as Router, Route, Routes,} from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import MainPage from '../pages/MainPage';
 import Categories from '../pages/categories/Categories.js';
@@ -19,7 +19,7 @@ const App = () => {
 return (
         <div className="App">
 
-            <Router>
+            <Router basename='Online-News-Api-React-App'>
                     <Routes>
                         <Route element={<Categories/>} path='/:categories/page/:pageNumber'></Route>
                         <Route element={<MainPage/>} path='/'></Route>
